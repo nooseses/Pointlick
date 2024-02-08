@@ -16,8 +16,30 @@ gameWindow.onclick = function (e) {
     mainCharacter.style.top = y - offsetCharacter + "px";
 
 
-    if (e.target.id == "doorOne") {
-        mainCharacter.style.backgroundColor = "00FF42";
-        console.log("Open Door");
+    switch (e.target.id) {
+        case "doorOne":
+            mainCharacter.style.backgroundColor = "#FFF00"
+            e.target.style.opacity = 0.4;
+            break;
+
+        default:
+            //explode
+            mainCharacter.style.backgroundColor = "#rgb(162, 207, 0);"
+            doorOne.style.opacity = 0.8;
+            break;
+
+    }
+    switch (e.target.id) {
+        case "sign":
+            mainCharacter.style.backgroundColor = "#FFF00"
+            e.target.style.opacity = 0.4;
+            break;
+
+        default:
+            //explode
+            mainCharacter.style.backgroundColor = "#rgb(162, 207, 0);"
+            sign.style.opacity = 0.8;
+            break;
+
     }
 }
